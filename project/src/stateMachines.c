@@ -5,8 +5,7 @@
 int blink_count = 0;
 int main_state = 0;
 int intensity_state = 1;
-int fast_state = 0;
-int button_state = 0;    
+int fast_state = 0;  
 
 void light_25(int state) {
   switch(state) {

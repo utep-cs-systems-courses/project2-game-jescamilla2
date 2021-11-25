@@ -18,19 +18,17 @@ __interrupt_vec(WDT_VECTOR) WDT(){	/* 250 interrupts/sec */
 
   if (switch1_state_down) {
     state_advance(blink_count);
-    if (++blink_count >= 1000) {
+    if (++blink_count >= 500) {
       blink_count = 0;
     }
   } else if (switch2_state_down) {
-
-    P1OUT |= LED_RED;
-    //buzzer_set_period(0);
-    if (++blink_count >= 1000) {
+    buzzer_set_period(0);
+    if (++blink_count >= 500) {
       blink_count = 0;
     }
   } else if (switch3_state_down) {
     alternate_leds(blink_count);
-    if (++blink_count >= 1000) {
+    if (++blink_count >= 500) {
       blink_count = 0;
     }
   } else if (switch4_state_down) {
