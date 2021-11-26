@@ -1,5 +1,5 @@
-#ifndef led_assy_included
-#define led_assy_included
+#ifndef led_a_included
+#define led_a_included
 
 void alternate_leds();
 
